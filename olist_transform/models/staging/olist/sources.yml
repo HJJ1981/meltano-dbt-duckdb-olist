@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: raw
+    description: "Raw Olist e-commerce data ingested via tap-csv."
+    tables:
+      - name: products
+        description: "Raw product dimensions including categories, weights, and sizes."
+      - name: product_category_name_translation
+        description: "Mapping table between Portuguese and English category names."
+      - name: orders
+        description: "Raw order transaction records containing statuses and timestamps."
+      - name: order_items
+        description: "Line item details for each order, linking products, sellers, and prices."
+      - name: customers
+        description: "Raw customer profiles mapping order tokens to unique user IDs."

@@ -1,0 +1,44 @@
+# ==============================================================================
+# 🐍 Python & Local IDE Environment Configurations
+# ==============================================================================
+.venv/
+.vscode/
+__pycache__/
+*.pyc
+*.log
+
+# ==============================================================================
+# 🗄️ Local Data Warehouse & Heavy Datasets (Never commit data records)
+# ==============================================================================
+*.db
+*.db.wal
+*.sqlite
+data/*.csv
+
+# ==============================================================================
+# 🔄 Ingestion Layer Exclusions (Meltano Orchestration)
+# ==============================================================================
+mds_project/.meltano/
+mds_project/.logs/
+mds_project/logs/
+
+# Scratchpad data folders inside the ingestion workspace
+mds_project/extract/
+mds_project/analyze/
+mds_project/load/
+mds_project/output/
+mds_project/orchestrate/
+mds_project/plugins/
+mds_project/*.txt
+
+# ==============================================================================
+# 🧼 Transformation Layer Exclusions (dbt Core Framework)
+# ==============================================================================
+olist_transform/.user.yml
+olist_transform/profiles.yml
+
+# Heavy auto-generated run artifacts, compilation outputs, and dependencies
+olist_transform/target/
+olist_transform/dbt_packages/
+olist_transform/dbt_modules/
+olist_transform/logs/

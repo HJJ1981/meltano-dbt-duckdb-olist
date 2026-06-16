@@ -1,0 +1,44 @@
+default_environment: dev
+project_id: olist_data_pipeline
+environments:
+- name: dev
+- name: staging
+- name: prod
+
+plugins:
+  extractors:
+  - name: tap-csv
+    variant: meltanolabs
+    config:
+      files:
+      - entity: customers
+        path: ../data/olist_customers_dataset.csv
+        keys: [customer_id]
+
+      - entity: orders
+        path: ../data/olist_orders_dataset.csv
+        keys: [order_id]
+
+      - entity: order_items
+        path: ../data/olist_order_items_dataset.csv
+        keys: [order_id, order_item_id]
+
+      - entity: products
+        path: ../data/olist_products_dataset.csv
+        keys: [product_id]
+
+      - entity: product_category_name_translation
+        path: ../data/product_category_name_translation.csv
+        keys: [product_category_name]
+
+  loaders:
+  - name: target-duckdb
+    variant: jwills
+    config:
+      filepath: ./mds_warehouse.db
+      default_target_schema: raw
+
+  - name: target-jsonl
+    variant: andyh1203
+    config:
+      filepath: ./output/
