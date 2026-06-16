@@ -162,11 +162,11 @@ This platform is fully decoupled into isolated infrastructure layers. To initial
 
 1. **Incorporate Ingestion (`./mds_project`):** 
    Contains the `meltano.yml` definitions, bulk-loading parameters, and instructions for extracting raw CSVs into the DuckDB warehouse layer. 
-   👉 [View Ingestion Setup & Execution Guide](../mds_project/README.md)
+   👉 [View Ingestion Setup & Execution Guide](./mds_project/README.md)
 
 2. **Incorporate Transformations (`./olist_transform`):** 
    Contains the dbt Core architecture, custom macros, data quality testing suites, and star schema dimensional models. 
-   👉 [View Transformation & Modeling Guide](../olist_transform/README.md)
+   👉 [View Transformation & Modeling Guide](./olist_transform/README.md)
 
 3. **Incorporate Presentation (`./dashboard`):** 
    Contains the compiled interactive Power BI semantic model (`olist_visualization.pbix`) and visual artifacts mapping executive business metrics.
