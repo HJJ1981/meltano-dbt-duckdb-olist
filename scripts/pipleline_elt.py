@@ -21,13 +21,4 @@ stg_customers = conn.execute("SELECT * FROM raw.stg_customers").df()
 stg_products = conn.execute("SELECT * FROM raw.stg_products").df()
 stg_translations = conn.execute("SELECT * FROM raw.stg_product_category_name_translation").df()
 
-print(f"✅ Success! Loaded {fct_orders.shape[0]} rows into fct_orders DataFrame.")
-print(f"✅ Success! Loaded {dim_customers.shape[0]} rows into dim_customers DataFrame.")
-print(f"✅ Success! Loaded {dim_products.shape[0]} rows into dim_products DataFrame.")
-print(f"✅ Success! Loaded {stg_order_items.shape[0]} rows into stg_order_items DataFrame.")
-print(f"✅ Success! Loaded {stg_orders.shape[0]} rows into stg_orders DataFrame.")
-print(f"✅ Success! Loaded {stg_customers.shape[0]} rows into stg_customers DataFrame.")
-print(f"✅ Success! Loaded {stg_products.shape[0]} rows into stg_products DataFrame.")
-print(f"✅ Success! Loaded {stg_translations.shape[0]} rows into stg_translations DataFrame.")
-
 conn.close()

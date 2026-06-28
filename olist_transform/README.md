@@ -67,7 +67,7 @@ dbt docs serve --profiles-dir .
 
 
 - Data trust is managed using a combination of automated constraints:
-Schema Tests (core.yml & source.yml): Enforces field-level integrity across structural keys using built-in assertions (unique, not_null, and explicit foreign-key relationships).
+Schema Tests (core.yml & sources.yml): Enforces field-level integrity across structural keys using built-in assertions (unique, not_null, and explicit foreign-key relationships).
 
 - Singular Tests (tests/): Contains custom SQL evaluation files (e.g., assert_total_item_amount_is_positive.sql) that run analytical margin and financial logic safety checks directly against production models.
 

@@ -1,5 +1,5 @@
 default_environment: dev
-project_id: olist_data_pipeline
+project_id: 019f0c55-f754-70fa-8180-d3ac77242a70
 environments:
 - name: dev
 - name: staging

@@ -14,15 +14,16 @@ models:
         description: "The operational delivery status of the order transaction."
         tests:
           - accepted_values:
-              values:
-                - delivered
-                - shipped
-                - canceled
-                - invoiced
-                - processing
-                - approved
-                - unavailable
-                - created
+              arguments:
+                values:
+                  - delivered
+                  - shipped
+                  - canceled
+                  - invoiced
+                  - processing
+                  - approved
+                  - unavailable
+                  - created
       
   - name: dim_customers
     description: "Core dimension table aggregating lifecycle metrics and lifetime value (CLV) per unique customer."

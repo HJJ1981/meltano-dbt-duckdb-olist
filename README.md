@@ -1,4 +1,4 @@
-# End-to-End E-Commerce Analytics Pipeline: Modern Data Stack (MDS) Showcase
+# End-to-End E-Commerce Analytics Pipeline using the Modern Data Stack
 
 [![Meltano](https://img.shields.io/badge/ELT-Meltano-blueviolet?logo=meltano)](https://meltano.com/)
 [![dbt Core](https://img.shields.io/badge/Transformation-dbt%20Core-orange?logo=dbt)](https://www.getdbt.com/)
@@ -6,9 +6,23 @@
 [![Power BI](https://img.shields.io/badge/BI-Power%20BI-yellow?logo=power-bi)](https://powerbi.microsoft.com/)
 [![Ubuntu WSL](https://img.shields.io/badge/OS-Ubuntu%20(WSL)-ubuntu?logo=ubuntu)](https://ubuntu.com/)
 
-An end-to-end data platform engineered within an **Ubuntu/WSL Linux environment**. This project implements a fully functional Modern Data Stack to ingest, clean, model, and visualize fragmented relational data from the Brazilian marketplace Olist e-commerce dataset. 
+An end-to-end data platform engineered within an **Ubuntu/WSL Linux environment**. This project implements a fully functional Modern Data Stack to ingest, clean, model, and visualize normalized relational data from the Brazilian marketplace Olist e-commerce dataset. 
 
 The pipeline moves from raw CSV extraction to a centralized DuckDB local warehouse, structures it into an analytics-ready Star Schema using dbt Core, and delivers high-impact executive insights through an interactive Power BI dashboard.
+
+---
+
+## 🛠️ Tech Stack
+
+- Python
+- Meltano
+- DuckDB
+- dbt Core
+- SQL
+- Power BI
+- Ubuntu (WSL)
+- Git
+- GitHub
 
 ---
 
@@ -172,3 +186,35 @@ This platform is fully decoupled into isolated infrastructure layers. To initial
    Contains the compiled interactive Power BI semantic model (`olist_visualization.pbix`) and visual artifacts mapping executive business metrics.
 
 ---
+
+## 💻 Development Environment
+
+| Software | Version |
+|----------|---------|
+| Python | 3.10 |
+| Meltano | 4.2.1 |
+| dbt Core | 1.11.11 |
+| dbt-duckdb | 1.10.1 |
+| DuckDB CLI | 1.5.3 |
+| DuckDB Python | 1.5.3 |
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+---
+
+## 👨‍💻 Author
+
+**Hu Jian Jin**
+
+- GitHub: https://github.com/HJJ1981
+- LinkedIn: https://www.linkedin.com/in/jian-jin-hu-69951243/
+
+---
+
+## ⭐ Support
+
+If you found this project helpful, consider giving it a ⭐ on GitHub. It helps others discover the project and motivates continued development.
