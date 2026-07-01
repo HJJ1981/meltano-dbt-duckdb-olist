@@ -43,7 +43,7 @@ customer_orders_aggregated as (
         max(o.order_purchase_at) as most_recent_purchase_at,
         count(distinct o.order_id) as total_orders,
         coalesce(sum(o.total_item_amount), 0) as lifetime_value,
-        coalesce(avg(o.total_item_amount), 0) as average_order_value
+        coalesce(avg(o.total_item_amount), 0) as average_order_item_value
     from customers c
     left join orders o on c.customer_id = o.customer_id
     group by 1
@@ -58,8 +58,8 @@ select
     a.most_recent_purchase_at,
     a.total_orders,
     a.lifetime_value,
-    a.average_order_value,
-    
+    a.average_order_item_value,
+
     case 
         when a.total_orders = 1 then 'One-Time Buyer'
         when a.total_orders = 2 then 'Repeat Customer'
